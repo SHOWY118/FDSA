@@ -50,7 +50,7 @@ pip install torch torchvision matplotlib scikit-learn hnswlib wandb
 cd peiy/paper || { echo "Error: peiy/paper directory missing!"; exit 1; }
 python3 main_fedcache.py
 
-#赋予脚本执行权限
+# 赋予脚本执行权限
 chmod +x run.sh
-#执行脚本
+# 执行脚本
 ./run.sh
