@@ -1,6 +1,7 @@
 # Exploring Subtle Manipulation Vulnerabilities in Federated Distillation
 ## Introduction
-![输入图片说明](/imgs/2025-05-27/tsisZqe4XVVaFWYh.png)
+![Uploading image.png…]()
+
 ## Dependencies
 * Python 3.8  
 * PyTorch (`torch`)  2.7.0  
