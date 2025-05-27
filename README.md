@@ -5,7 +5,7 @@
   
 - **Take-Away**: FDSA subtly manipulates client logits to evade detection while significantly degrading the robustness of server-side aggregation.  
   
-![image-20250526222704042](/Overflow_of_FDSA.png)
+![image-20250526222704042](/FDSA/Overflow_of_FDSA.png)
 
 ## Dependencies
 * Python 3.8  
