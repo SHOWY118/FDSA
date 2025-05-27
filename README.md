@@ -1,6 +1,6 @@
 # Exploring Subtle Manipulation Vulnerabilities in Federated Distillation
 ## Introduction
-![Uploading image.png…]()
+
 
 ## Dependencies
 * Python 3.8  
