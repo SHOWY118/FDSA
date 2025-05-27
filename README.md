@@ -22,11 +22,11 @@
 **Create a Conda environment named 'peiy' (ensure Python version is compatible with the project).**
 
 ```
-conda create -n peiy python=3.8 -y
+conda create -n xx python=3.8 -y
 ```
 **Activate the environment**
 ```
-conda activate peiy
+conda activate xx
 ```
 
 ### 2. Install dependencies
@@ -36,10 +36,10 @@ pip install torch torchvision
 ```
 **Install Additional Dependencies**
 ```
-pip install matplotlib          # 绘图库 
-pip install scikit-learn        # 机器学习工具
-pip install hnswlib             # 高效向量搜索库
-pip install wandb               # 实验跟踪工具
+pip install matplotlib          # Plotting library  
+pip install scikit-learn        # Machine learning toolkit  
+pip install hnswlib             # Efficient vector search library  
+pip install wandb               # Experiment tracking tool  
 ```
 ## File Structure
 ```
@@ -67,20 +67,20 @@ python3 main_fedcache.py
 ###  Automated Script Execution
 ```
 #!/bin/bash  
-set -e  # 遇到错误自动退出  
+set -e  
   
-# 创建 Conda 环境（如果不存在）  
-if ! conda env list | grep -q "peiy"; then  
-    conda create -n peiy python=3.8 -y   
+#  Create a Conda environment named 'my_env' with Python 3.9 (if it doesn't exist) 
+if ! conda env list | grep -q "xx"; then  
+    conda create -n xx python=3.8 -y   
     
-# 激活环境  
+#  Activate the environment 
 source $(conda info --base)/etc/profile.d/conda.sh  
-conda activate peiy  
+conda activate xx  
   
-# 安装依赖（带错误检查）  
+# Install dependencies (with error checking)
 pip install torch torchvision matplotlib scikit-learn hnswlib wandb  
   
-#  运行程序（带路径检查）  
+# Run program (with path checking)
 cd peiy/paper || { echo "Error: peiy/paper directory missing!"; exit 1; }  
 python3 main_fedcache.py
 ```
