@@ -19,7 +19,7 @@
 
 ## Installation and Configuration
 ### 1. Create and activate a Conda environment
-**Create a Conda environment named 'peiy' (ensure Python version is compatible with the project).**
+**Create a Conda environment named 'xx' (ensure Python version is compatible with the project).**
 
 ```
 conda create -n xx python=3.8 -y
@@ -57,7 +57,7 @@ FDSA/
 ### Navigate to the project directory
 **Switch to the project root directory**
 ```
-cd peiy/paper
+cd xx/paper
 ```
 ###  Run the Main Program
 **Execute Federated Cache Main Script**
