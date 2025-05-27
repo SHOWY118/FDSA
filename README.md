@@ -1,15 +1,13 @@
-#  联邦蒸馏中的隐蔽性操纵漏洞探究
-这是论文《联邦蒸馏中的隐蔽性操纵漏洞探究》的官方代码仓库
-  
-## 概述
+# Exploring Subtle Manipulation Vulnerabilities in Federated Distillation
+### Overview  
   
 -------------------------  
   
--   **核心发现**：FDSA通过精妙操纵客户端logits（对数概率输出），既能规避检测，又能显著降低服务端聚合过程的鲁棒性。
+- **Take-Away**: FDSA subtly manipulates client logits to evade detection while significantly degrading the robustness of server-side aggregation.  
   
-![image-20250526222704042](/FDSA/Overflow_of_FDSA.png)
+![image-20250526222704042](/Overflow_of_FDSA.png)
 
-## 依赖环境
+## Dependencies
 * Python 3.8  
 * PyTorch (`torch`)  2.7.0  
 * PyTorch (`torchvision`) 0.22.0
@@ -19,53 +17,54 @@
 * Scikit-learn (`scikit-learn`)  1.6.1
 * NumPy (`numpy`)  2.1.3
 
-##  安装与配置
-### 1.  创建并激活Conda环境
-**创建名为'peiy'的Conda环境（确保Python版本与项目兼容）**
+## Installation and Configuration
+### 1. Create and activate a Conda environment
+**Create a Conda environment named 'peiy' (ensure Python version is compatible with the project).**
 
 ```
 conda create -n peiy python=3.8 -y
 ```
-**激活环境**
+**Activate the environment**
 ```
 conda activate peiy
 ```
 
-### 2.  安装依赖项
-**安装PyTorch核心依赖**
+### 2. Install dependencies
+ **Install PyTorch Dependencies**
 ```
 pip install torch torchvision
 ```
-**安装其他必要依赖**
+**Install Additional Dependencies**
 ```
 pip install matplotlib          # 绘图库 
 pip install scikit-learn        # 机器学习工具
 pip install hnswlib             # 高效向量搜索库
 pip install wandb               # 实验跟踪工具
 ```
-## 文件结构
-```  
-RecServe/  
-├── main.py # Main script for running experiments  
-├── recursive_serve.py # Core implementation of the RecServe framework  
-├── base_serve.py # Basic serving class  
-├── evaluation.py # Evaluation metrics calculation  
-├── utils.py # Utility functions for dataset loading, text cleaning, etc.  
-└── README.md # This document  
+## File Structure
+```
+FDSA/  
+├── main_fdsa.py # Main script for running experiments  
+├── PPVFD.py # Core implementation for FD  
+├── PPVFedCache.py # Core implementation for FedCache  
+├── ATTACKS.py # Attacks methods  
+├── lcc.py # Tools for FD.  
+├── lcc_cache.py # Tools for FedCache.  
+└── README.md # This document
 ```
 
-##  使用指南
-### 进入项目目录
-**切换至项目根目录**
+## Usage
+### Navigate to the project directory
+**Switch to the project root directory**
 ```
 cd peiy/paper
 ```
-### 运行主程序
-**执行联邦缓存主脚本**
+###  Run the Main Program
+**Execute Federated Cache Main Script**
 ```
 python3 main_fedcache.py
 ```
-### 自动化脚本执行
+###  Automated Script Execution
 ```
 #!/bin/bash  
 set -e  # 遇到错误自动退出  
@@ -85,13 +84,14 @@ pip install torch torchvision matplotlib scikit-learn hnswlib wandb
 cd peiy/paper || { echo "Error: peiy/paper directory missing!"; exit 1; }  
 python3 main_fedcache.py
 ```
-**赋予执行权限**
+**Execute Federated Cache Main Script**
 
 ```
 chmod +x run.sh  
 ```
-**运行自动化脚本**
+**Run the Script**
 
 ``` 
 ./run.sh
 ```
+
