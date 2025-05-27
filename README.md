@@ -7,7 +7,7 @@
   
 -   **核心发现**：FDSA通过精妙操纵客户端logits（对数概率输出），既能规避检测，又能显著降低服务端聚合过程的鲁棒性。
   
-![image-20250526222704042](/Overflow_of_FDSA.png)
+![image-20250526222704042](/FDSA/Overflow_of_FDSA.png)
 
 ## 依赖环境
 * Python 3.8  
